@@ -2,16 +2,16 @@ import java.util.HashMap;
 
 public class IdsPasswords {
     //Hashmap
-    HashMap<String,String> loginInfo = new HashMap<String,String>();
+    private HashMap<String,String> loginInfo = new HashMap<String,String>();
 
     IdsPasswords(){
-        loginInfo("a","b");
-        loginInfo("John","biltong");
-        loginInfo("Peter","Pizza123");
-        loginInfo("Mike","Smit");
+        loginInfo.put("a","b");
+        loginInfo.put("John","biltong");
+        loginInfo.put("Peter","Pizza123");
+        loginInfo.put("Mike","Smit");
     }
 
-    protected HashMap<String, String> getLoginInfo(){
+    protected HashMap<String,String> getLoginInfo(){
         return loginInfo;
     }
 }
