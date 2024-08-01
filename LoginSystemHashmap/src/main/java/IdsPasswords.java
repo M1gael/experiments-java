@@ -11,7 +11,7 @@ public class IdsPasswords {
         loginInfo("Mike","Smit");
     }
 
-    protected HashMap getLoginInfo(){
+    protected HashMap<String, String> getLoginInfo(){
         return loginInfo;
     }
 }
