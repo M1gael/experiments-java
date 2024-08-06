@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab9c7636-0967-4953-bba8-3bfb28de392a" name="Changes" comment="Temp Commit to save progress to move IDEs">
+    <list default="true" id="ab9c7636-0967-4953-bba8-3bfb28de392a" name="Changes" comment="Finished a basic Java login sytem.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WelcomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,6 @@
     "Notification.DisplayName-DoNotAsk-Vcs Important Messages": "VCS important messages",
     "Notification.DoNotAsk-Vcs Important Messages": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -113,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722695178828</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished a basic Java login sytem.">
+      <option name="closed" value="true" />
+      <created>1722937921581</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722937921581</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,17 +126,7 @@
     <MESSAGE value="Progress on a basic GUI login page" />
     <MESSAGE value="First succesfull Build so far ." />
     <MESSAGE value="Temp Commit to save progress to move IDEs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temp Commit to save progress to move IDEs" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WelcomePage.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Finished a basic Java login sytem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished a basic Java login sytem." />
   </component>
 </project>
