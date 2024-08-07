@@ -8,7 +8,9 @@ public class Fibonacci {
 
     public Fibonacci(){
         fibList = createFibIndex();
-        printList(fibList);
+        //printList(fibList);
+        System.out.println(fibList.get(0));
+        System.out.println("weee from constructor");
     }
 
     private void printList(ArrayList fibList){
