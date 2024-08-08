@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab9c7636-0967-4953-bba8-3bfb28de392a" name="Changes" comment="Removed other dir that was added by accident earlier." />
+    <list default="true" id="ab9c7636-0967-4953-bba8-3bfb28de392a" name="Changes" comment="Removed other dir that was added by accident earlier.">
+      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Fibonacci.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/GUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
