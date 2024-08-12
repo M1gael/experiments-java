@@ -8,7 +8,7 @@ public class Fibonacci {
     protected ArrayList<Integer> fibList = new ArrayList<Integer>();
 
     public Fibonacci(){
-        getFibonacci();
+        setList();
     }
 
     private void printList(){
@@ -19,7 +19,7 @@ public class Fibonacci {
     }
 
 
-    private void getFibonacci(){
+    private void setList(){
         int previous = 0 , current = 1 , next = 0 ;      // 1
         for (int i = 0 ; i<100 ; i++){
             if (current <= 100){
@@ -31,7 +31,10 @@ public class Fibonacci {
                 break;
             }
         }
-        Machine computer = new Machine(fibList);
     }
+    public ArrayList getList(){
+        return fibList;
+    }
+
 }
 
