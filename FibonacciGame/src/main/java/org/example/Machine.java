@@ -5,13 +5,13 @@ import java.util.Random;
 
 public class Machine {
     protected int guessNum = 0 ;
-    protected boolean fibTrueFalse = false , userAnswer = false;
     protected ArrayList<Integer> fibIndex =new ArrayList<Integer>();
 
     public Machine(){
         Random random = new Random(90);
         guessNum = (random.nextInt() + 10); //generate guess num
-        isFibonacci();
+        getFibIndex(); //get list from Fib class
+        isFibonacci(); //determine if the random number is part of the sequence
     }
 
     private void getFibIndex (){
@@ -19,19 +19,19 @@ public class Machine {
         fibIndex =  newList.getList();
     }
 
-    private void isFibonacci(){
+    private boolean isFibonacci(){
         if (fibIndex.contains(guessNum)){
-            fibTrueFalse = true;
+            return true;
         }else {
-            fibTrueFalse = false; //Ensure program works correctly if implementing loop
+            return false; //Ensure program works correctly if implementing loop
         }
     }
 
-    public void setBotResponse(){
-        if (fibTrueFalse == userAnswer){
-            System.out.println("Correct , the number " + guessNum + " is infact part of the fibonacci sequence." );
+    public String printAnswer(boolean userAnswer){
+        if (isFibonacci() == userAnswer){
+            return "Correct , the number " + guessNum + " is infact part of the fibonacci sequence.";
         }else{
-            System.out.println("Incorrect");
+            return  "Incorrect";
         }
     }
 
