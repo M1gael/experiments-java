@@ -7,16 +7,19 @@ public class Machine {
     protected int guessNum = 0 ;
     protected ArrayList<Integer> fibIndex =new ArrayList<Integer>();
 
-    public Machine(){
+    /*public Machine(){
         Random random = new Random(90);
         guessNum = (random.nextInt() + 10); //generate guess num
         getFibIndex(); //get list from Fib class
         isFibonacci(); //determine if the random number is part of the sequence
-    }
+    }*/
 
-    private void getFibIndex (){
+    private void getValues (){
         Fibonacci newList = new Fibonacci();
         fibIndex =  newList.getList();
+
+        Random random = new Random(90);
+        guessNum = (random.nextInt() + 10); //generate guess num
     }
 
     private boolean isFibonacci(){

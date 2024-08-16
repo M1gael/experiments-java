@@ -7,17 +7,12 @@ public class Fibonacci {
 
     protected ArrayList<Integer> fibList = new ArrayList<Integer>();
 
-    public Fibonacci(){
-        setList();
-    }
-
     private void printList(){
         System.out.println("Recieved Array length:" + fibList.size() );
         for (int i = 0; i < fibList.size(); i++) {
             System.out.println(fibList.get(i));
         }
     }
-
 
     private void setList(){
         int previous = 0 , current = 1 , next = 0 ;      // 1
@@ -32,6 +27,7 @@ public class Fibonacci {
             }
         }
     }
+
     public ArrayList getList(){
         return fibList;
     }
