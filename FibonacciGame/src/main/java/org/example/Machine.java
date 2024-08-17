@@ -6,20 +6,16 @@ import java.util.Random;
 public class Machine {
     protected int guessNum = 0 ;
     protected ArrayList<Integer> fibIndex =new ArrayList<Integer>();
+    Fibonacci fibonacci = new Fibonacci();
+    Random random = new Random();
 
-    /*public Machine(){
-        Random random = new Random(90);
-        guessNum = (random.nextInt() + 10); //generate guess num
-        getFibIndex(); //get list from Fib class
-        isFibonacci(); //determine if the random number is part of the sequence
-    }*/
+    public Machine(){
+
+    }
 
     private void getValues (){
-        Fibonacci newList = new Fibonacci();
-        fibIndex =  newList.getList();
-
-        Random random = new Random(90);
-        guessNum = (random.nextInt() + 10); //generate guess num
+        fibIndex =  fibonacci.getList();
+        guessNum = (random.nextInt(90) + 10); //generate guess num
     }
 
     private boolean isFibonacci(){
@@ -30,13 +26,19 @@ public class Machine {
         }
     }
 
+    public String printGuess(){
+        getValues();
+        return "Is the number " + guessNum + " , part of the Fibonacci sequence?";
+    }
+
     public String printAnswer(boolean userAnswer){
         if (isFibonacci() == userAnswer){
-            return "Correct , the number " + guessNum + " is infact part of the fibonacci sequence.";
+            return "Correct";
         }else{
             return  "Incorrect";
         }
     }
+
 
 
 }

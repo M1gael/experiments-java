@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab9c7636-0967-4953-bba8-3bfb28de392a" name="Changes" comment="Removed other dir that was added by accident earlier.">
+      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Fibonacci.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Machine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Fibonacci.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Fibonacci.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Machine.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Machine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,25 +49,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-Vcs Important Messages&quot;: &quot;VCS important messages&quot;,
-    &quot;Notification.DoNotAsk-Vcs Important Messages&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/buntu/GitDir/Java-Projects/LoginSystemHashmap&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Notification.DisplayName-DoNotAsk-Vcs Important Messages": "VCS important messages",
+    "Notification.DoNotAsk-Vcs Important Messages": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/buntu/GitDir/Learn-Java",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

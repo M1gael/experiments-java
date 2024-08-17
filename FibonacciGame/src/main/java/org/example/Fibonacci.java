@@ -7,7 +7,8 @@ public class Fibonacci {
 
     protected ArrayList<Integer> fibList = new ArrayList<Integer>();
 
-    private void printList(){
+    public void printList(){
+        setList();
         System.out.println("Recieved Array length:" + fibList.size() );
         for (int i = 0; i < fibList.size(); i++) {
             System.out.println(fibList.get(i));
@@ -29,6 +30,7 @@ public class Fibonacci {
     }
 
     public ArrayList getList(){
+        setList();
         return fibList;
     }
 
