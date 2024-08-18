@@ -7,7 +7,7 @@ public class Fibonacci {
 
     protected ArrayList<Integer> fibList = new ArrayList<Integer>();
 
-    public void printList(){
+    public void printList(){// print the fibonacci array , more for debug
         setList();
         System.out.println("Recieved Array length:" + fibList.size() );
         for (int i = 0; i < fibList.size(); i++) {
@@ -15,7 +15,7 @@ public class Fibonacci {
         }
     }
 
-    private void setList(){
+    private void setList(){ //populate an array with the fibonacci sequence
         int previous = 0 , current = 1 , next = 0 ;      // 1
         for (int i = 0 ; i<100 ; i++){
             if (current <= 100){
@@ -29,7 +29,7 @@ public class Fibonacci {
         }
     }
 
-    public ArrayList getList(){
+    public ArrayList getList(){ //simply to pass the generated list , calls setList to ensure always populated
         setList();
         return fibList;
     }

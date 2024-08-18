@@ -12,7 +12,7 @@ public class GUI implements ActionListener{
     JButton noBtn = new JButton();
     JButton retryBtn = new JButton();
 
-    Machine machine = new Machine();
+    Machine machine = new Machine(); // machine is instanced
 
     public GUI(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -20,8 +20,8 @@ public class GUI implements ActionListener{
         frame.setLayout(null);
         frame.setVisible(true);
 
-        yesBtn.setText("True");
-        noBtn.setText("False");
+        yesBtn.setText("Yes");
+        noBtn.setText("No");
         retryBtn.setText("Retry");
         yesBtn.setFocusable(false);
         noBtn.setFocusable(false);
@@ -48,13 +48,13 @@ public class GUI implements ActionListener{
         machineOutLbl.setText(machine.printGuess());
     }
 
-    public void actionPerformed(ActionEvent e){
+    public void actionPerformed(ActionEvent e){ //make use of actionListeners to interact with machine class
         if (e.getSource()==yesBtn){
             machineOutLbl.setText(machine.printAnswer(true));
         }else if (e.getSource()==noBtn) {
             machineOutLbl.setText( machine.printAnswer(false));
-        }else {
-            machine.printGuess();
+        }else if (e.getSource()==retryBtn){
+            machineOutLbl.setText(machine.printGuess());
         }
 
     }
