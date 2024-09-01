@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab9c7636-0967-4953-bba8-3bfb28de392a" name="Changes" comment="Removed other dir that was added by accident earlier.">
-      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FibonacciGame/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Fibonacci.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Machine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Machine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Fibonacci.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Fibonacci.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Machine.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Machine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FibonacciGame/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ab9c7636-0967-4953-bba8-3bfb28de392a" name="Changes" comment="Removed other dir that was added by accident earlier." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +44,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/buntu/GitDir/Learn-Java",
+    "last_opened_file_path": "/home/buntu/GitDir/Java-Projects",
     "settings.editor.selected.configurable": "editor.preferences.completion"
   },
   "keyToStringList": {
