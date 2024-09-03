@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="FibonacciGame" />
-        <module name="DatabaseApplication-SQL" />
+        <module name="DatabaseApplication-MySql" />
         <module name="Calculator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DatabaseApplication-SQL" target="22" />
       <module name="SpringTest" target="22" />
       <module name="Test" target="1.8" />
     </bytecodeTargetLevel>

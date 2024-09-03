@@ -9,10 +9,12 @@
         <option value="$PROJECT_DIR$/Calculator/pom.xml" />
         <option value="$PROJECT_DIR$/SpringTest/pom.xml" />
         <option value="$PROJECT_DIR$/DatabaseApplication-SQL/pom.xml" />
+        <option value="$PROJECT_DIR$/DatabaseApplication-MySql/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/DatabaseApplication-SQL/pom.xml" />
         <option value="$PROJECT_DIR$/SpringTest/pom.xml" />
         <option value="$PROJECT_DIR$/Test/pom.xml" />
       </set>
