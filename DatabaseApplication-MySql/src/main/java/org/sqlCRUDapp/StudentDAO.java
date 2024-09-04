@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class StudentDAO {
 
-    public void addStudent(String name , int age , String email) throws SQLException{
+    public void addStudent(String name , int age , String email){
 
         String sql = "INSERT INTO students (name , age , email) VALUES (? , ? , ?)"; //Debug
 
@@ -53,7 +53,7 @@ public class StudentDAO {
         PreparedStatement pstmt = conn.prepareStatement(sql)){
 
             pstmt.setString(1 , name);
-            pstmt.setInt(2 , id);
+            //pstmt.setInt(2 , id);
 
             pstmt.executeUpdate();
         }catch (SQLException e) {
@@ -61,7 +61,7 @@ public class StudentDAO {
         }
     }
 
-    public void deleteStudent(int id) throws SQLException{
+    public void deleteStudent(String name) throws SQLException{
 
         String sql = "DELETE FROM students WHERE name = ?";
 
@@ -69,7 +69,7 @@ public class StudentDAO {
             Connection conn = DatabaseConnection.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql);
 
-            pstmt.setInt(1 , id);
+            //pstmt.setInt(1 , name);
 
             pstmt.executeUpdate();
         } catch (SQLException e){
