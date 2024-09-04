@@ -10,6 +10,7 @@ public class Main {
 
         try {
             // Create
+            studentDAO.addStudent();
             // Read
             // Update
             // Delete
