@@ -14,7 +14,7 @@ public class Main {
         StudentDAO studentDAO = new StudentDAO();
 
 
-        for(int i = 0 ; i<1 ;){
+        do { //for(int i = 0 ; i<1 ;){
 
             System.out.println("Would you like to :" +
                     "\n 1: Make a new entry to the database." +
@@ -22,38 +22,38 @@ public class Main {
                     "\n 3: Remove an entry." +
                     "\n 4: Retrive all information on an entry." +
                     "\n 5: EXIT");
-            loopChoice = kb.nextLine();
+            loopChoice = kb.next();
 
             switch (loopChoice){
                 case  "1" :
-                        System.out.println("Case 1");
                     System.out.println("Enter Name :");
-                    name = kb.nextLine();
-                    kb.next();
+                    name = kb.next();
                     System.out.println("Enter Age :");
                     age = kb.nextInt();
-                    kb.next();
                     System.out.println("Enter Email :");
-                    email = kb.nextLine();
-                    kb.next();
+                    email = kb.next();
+                    //System.out.println(name + age + email);//Debug
                     studentDAO.addStudent(name , age , email);
                     break;
+
                 case  "2" :
                     System.out.println("Case 2");
                     break;
+
                 case  "3" :
                     System.out.println("Case 3");
                     break;
+
                 case  "4" :
                     System.out.println("Case 4");
                     break;
+
                 case  "5" :
-                    System.out.println("Case 5");
-                    i++;
-                    //again = false;
+                    //i++;
+                    again = false;
                     break;
 
             }
-        }
+        }while(again == true);
     }
 }

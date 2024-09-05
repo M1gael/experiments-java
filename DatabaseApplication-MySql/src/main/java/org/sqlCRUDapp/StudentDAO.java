@@ -10,7 +10,7 @@ public class StudentDAO {
 
     public void addStudent(String name , int age , String email){
 
-        String sql = "INSERT INTO students (name , age , email) VALUES (? , ? , ?)"; //Debug
+        String sql = "INSERT INTO students (name , age , email) VALUES (? , ? , ?)";
 
         try(Connection conn = DatabaseConnection.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql)){
@@ -76,6 +76,8 @@ public class StudentDAO {
             e.printStackTrace();
         }
     }
+
+
 
 
 }
