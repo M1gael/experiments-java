@@ -8,9 +8,11 @@ import java.sql.SQLException;
 
 public class StudentDAO {
 
+    private String sql ="";
+
     public void addStudent(String name , int age , String email){
 
-        String sql = "INSERT INTO students (name , age , email) VALUES (? , ? , ?)";
+        sql = "INSERT INTO student (name , age , email) VALUES (? , ? , ?)";
 
         try(Connection conn = DatabaseConnection.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql)){
@@ -27,7 +29,7 @@ public class StudentDAO {
 
     public void getStudent(String name , int age , String email) throws SQLException{
 
-        String sql  = "SELECT * FROM students";
+        sql  = "SELECT * FROM students";
 
         try(Connection conn = DatabaseConnection.getConnection();
         PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -45,15 +47,15 @@ public class StudentDAO {
         }
     }
 
-    public void updateStudentName(String name) throws SQLException {
+    public void updateStudentName(String name ,String newName){
 
-        String sql = "UPDATE students SET name = ? WHERE name = ?";
+        sql = "UPDATE student SET name = ? WHERE name = ?";
 
         try (Connection conn = DatabaseConnection.getConnection();
         PreparedStatement pstmt = conn.prepareStatement(sql)){
 
-            pstmt.setString(1 , name);
-            //pstmt.setInt(2 , id);
+            pstmt.setString(1 , newName);
+            pstmt.setString(2 , name);
 
             pstmt.executeUpdate();
         }catch (SQLException e) {
@@ -61,9 +63,9 @@ public class StudentDAO {
         }
     }
 
-    public void deleteStudent(String name) throws SQLException{
+    public void deleteStudent(String name){
 
-        String sql = "DELETE FROM students WHERE name = ?";
+        sql = "DELETE FROM student WHERE name = ?";
 
         try{
             Connection conn = DatabaseConnection.getConnection();
@@ -75,6 +77,17 @@ public class StudentDAO {
         } catch (SQLException e){
             e.printStackTrace();
         }
+    }
+
+    public void displayWholeTable(){
+        sql = "SELECT * FROM student;";
+        System.out.println(sql);
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery();){
+
+        }catch ()
     }
 
 

@@ -25,30 +25,35 @@ public class Main {
             loopChoice = kb.next();
 
             switch (loopChoice){
-                case  "1" :
+                case  "1" : //New entry
                     System.out.println("Enter Name :");
                     name = kb.next();
                     System.out.println("Enter Age :");
                     age = kb.nextInt();
                     System.out.println("Enter Email :");
                     email = kb.next();
-                    //System.out.println(name + age + email);//Debug
                     studentDAO.addStudent(name , age , email);
                     break;
 
-                case  "2" :
-                    System.out.println("Case 2");
+                case  "2" : //Update name
+                    System.out.println("Enter Student Name of the Row you want Modified:");
+                    name = kb.next();
+                    System.out.println("Enter the New Student Name:");
+                    String newName = kb.next();
+                    studentDAO.updateStudentName(name,newName);
                     break;
 
-                case  "3" :
-                    System.out.println("Case 3");
+                case  "3" :// Remove entry
+                    System.out.println("Enter Student Name of the Row you want Removed:");
+                    name = kb.next();
+                    studentDAO.deleteStudent(name);
                     break;
 
-                case  "4" :
-                    System.out.println("Case 4");
+                case  "4" :// Retrieve info
+                    studentDAO.displayWholeTable();
                     break;
 
-                case  "5" :
+                case  "5" ://Exit
                     //i++;
                     again = false;
                     break;
