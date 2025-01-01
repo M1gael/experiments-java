@@ -20,7 +20,7 @@ public class Main {
                     "\n 1: Make a new entry to the database." +
                     "\n 2: Update an entry name." +
                     "\n 3: Remove an entry." +
-                    "\n 4: Retrive all information on an entry." +
+                    "\n 4: Retrive all information on Table." +
                     "\n 5: EXIT");
             loopChoice = kb.next();
 

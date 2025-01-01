@@ -81,13 +81,20 @@ public class StudentDAO {
 
     public void displayWholeTable(){
         sql = "SELECT * FROM student;";
-        System.out.println(sql);
-
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery();){
 
-        }catch ()
+            while (rs.next()){
+                System.out.println("\n ===============");
+                System.out.println("Row ID: " + rs.getInt("id"));
+                System.out.println("Name: " + rs.getString("name"));
+                System.out.println("email: " + rs.getString("email"));
+                System.out.println("age: " + rs.getInt("age")+ "\n");
+            }
+        }catch (SQLException e){
+
+        }
     }
 
 
