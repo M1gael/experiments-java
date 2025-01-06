@@ -8,13 +8,13 @@ public class Main {
     public static void main(String[] args) {
 
         String name = "" , email = ""  , loopChoice = "";
-        int id = 0 , age = 0 ;
+        int age = 0 ;
         boolean again = true;
         Scanner kb = new Scanner(System.in);
         StudentDAO studentDAO = new StudentDAO();
 
 
-        do { //for(int i = 0 ; i<1 ;){
+        do {
 
             System.out.println("Would you like to :" +
                     "\n 1: Make a new entry to the database." +
@@ -54,7 +54,6 @@ public class Main {
                     break;
 
                 case  "5" ://Exit
-                    //i++;
                     again = false;
                     break;
 

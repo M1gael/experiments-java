@@ -20,8 +20,8 @@ public class StudentDAO {
                 pstmt.setString(1 , name);
                 pstmt.setInt(2 , age);
                 pstmt.setString(3 , email);
-
                 pstmt.executeUpdate();
+
             }catch (SQLException e) {
             e.printStackTrace();
         }
@@ -43,7 +43,6 @@ public class StudentDAO {
                 System.out.println("-----");
             }
         }catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 
@@ -59,7 +58,6 @@ public class StudentDAO {
 
             pstmt.executeUpdate();
         }catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 
@@ -71,11 +69,8 @@ public class StudentDAO {
             Connection conn = DatabaseConnection.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql);
 
-            //pstmt.setInt(1 , name);
-
             pstmt.executeUpdate();
         } catch (SQLException e){
-            e.printStackTrace();
         }
     }
 
