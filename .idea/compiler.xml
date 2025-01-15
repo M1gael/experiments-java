@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="FibonacciGame" />
+        <module name="ImageManipulation" />
         <module name="DatabaseApplication-MySql" />
         <module name="Calculator" />
       </profile>
