@@ -3,8 +3,8 @@ A simple repository where you can see my little projects of interest . These pro
 
 ## The Projects
 ### Fibonacci Game
-A very over-engineered approach to simply generate a number and have the user guess if it is part of the fibonacci sequence or not. Mainly helped understand how to setup dataflow and use different classes together.
+A very over-engineered approach to simply generate a number and have the user guess if it is part of the Fibonacci sequence or not. Mainly helped understand how to setup dataflow and use different classes together.
 ### LoginSystemHashmap 
 As the title states , a simple login system that can verify if a user exists and the password is correct ,  if the entered password is wrong , or if the user does not exist. Made use of hashmaps as an easy quick way to store data.
 ### DatabaseApplication-MySql
-A simple DAO project using JDBC with MySQL to insert , remove and retrieve data from the databse ; Non Gui.
+A simple DAO project using JDBC with MySQL to insert , remove and retrieve data from the database ; Non Gui.
