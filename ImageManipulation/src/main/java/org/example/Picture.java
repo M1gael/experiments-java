@@ -8,13 +8,12 @@ import javax.imageio.ImageIO;
 
 public class Picture {
 
-    public UI userInterface = new UI();
 
     public Picture(){
     }
 
-    public void setImage(String imgPath) throws IOException{
+    public BufferedImage setImage(String imgPath) throws IOException{
         BufferedImage bImage = ImageIO.read(new File(imgPath)); // Img now stored
-        userInterface.loadIcon(bImage);
+        return bImage; // Send loaded image back.
     }
 }

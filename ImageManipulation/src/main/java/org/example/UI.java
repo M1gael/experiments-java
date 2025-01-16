@@ -1,11 +1,13 @@
 package org.example;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class UI extends JFrame{
-
-    private JLabel displayLabel = new JLabel(); // Declare label for public use
+    //Instantiate objects that will have repeated use from class initiation
+    private  FileDialog dialog = new FileDialog((Frame)null, "Select File to Open");
+    private JLabel displayLabel = new JLabel();
 
     UI(){
 
@@ -21,6 +23,14 @@ public class UI extends JFrame{
 
         this.add(displayLabel); // add label
 
+    }
+
+    public String chooseFile(){
+        dialog.setMode(FileDialog.LOAD);
+        dialog.setVisible(true);
+        String file = dialog.getFile();
+        dialog.dispose();
+        return file + " chosen.";
     }
 
     public void loadIcon(BufferedImage image){
