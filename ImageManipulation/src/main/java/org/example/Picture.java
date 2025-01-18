@@ -11,9 +11,9 @@ import java.util.Arrays;
 public class Picture {
 
     private File imageFile;
-    private  BufferedImage bImage , scaledImage; // Reserve objects for repeated use
+    private  BufferedImage bOrigImage, bScaledImage; // Reserve objects for repeated use
     private Graphics2D g2d;
-    private double maxWidth = 1280, maxHeight = 720 , scaleWidth , scaleHeight  , scale;
+    private double maxWidth = 1920, maxHeight = 1080 , scaleWidth , scaleHeight  , scale;
     private int originalWidth , originalHeight , scaledWidth , scaledHeight;
     private String extension;
     private boolean isSupported;
@@ -42,14 +42,14 @@ public class Picture {
         } // Check if format is supported
 
         // Read image
-        bImage = ImageIO.read(imageFile); // Img now stored
-        if (bImage == null){
+        bOrigImage = ImageIO.read(imageFile); // Img now stored
+        if (bOrigImage == null){
             throw new IOException("Failed to load Image : " + imgPath );}
 
         //Scale image
         scaleImage();
 
-        return bImage;// Send loaded image to be scaled and return it.
+        return bScaledImage;// Send loaded image to be scaled and return it.
     }
 
 
@@ -59,8 +59,8 @@ public class Picture {
     private void scaleImage (){
 
         // Get values from original
-        originalWidth = bImage.getWidth();
-        originalHeight = bImage.getHeight();
+        originalWidth = bOrigImage.getWidth();
+        originalHeight = bOrigImage.getHeight();
         //Calculate Scaling factors
         scaleWidth = (double)maxWidth / originalWidth;
         scaleHeight = (double)maxHeight / originalHeight;
@@ -68,7 +68,8 @@ public class Picture {
 
         // If the image is smaller refrain from scaling it
         if (scale > 1.0){
-            System.exit(0);
+            bScaledImage = bOrigImage;
+            return;
         }
 
         // Calculate new Dimensions
@@ -76,14 +77,14 @@ public class Picture {
         scaledHeight = (int) (originalHeight*scale);
 
         // Create new scaled image
-        scaledImage = new BufferedImage(originalWidth , originalHeight , BufferedImage.TYPE_INT_ARGB);
-        g2d = scaledImage.createGraphics();
+        bScaledImage = new BufferedImage(scaledWidth , scaledHeight , BufferedImage.TYPE_INT_ARGB);
+        g2d = bScaledImage.createGraphics();
         // Set rendering hints
         g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION , RenderingHints.VALUE_INTERPOLATION_BICUBIC);
         g2d.setRenderingHint(RenderingHints.KEY_RENDERING , RenderingHints.VALUE_RENDER_QUALITY);
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING , RenderingHints.VALUE_ANTIALIAS_ON);
         // Draw
-        g2d.drawImage(bImage , 0 , 0 , scaledWidth , scaledHeight , null);
+        g2d.drawImage(bOrigImage, 0 , 0 , scaledWidth , scaledHeight , null);
         g2d.dispose();
     }
 }

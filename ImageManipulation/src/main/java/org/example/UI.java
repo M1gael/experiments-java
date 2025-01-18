@@ -10,14 +10,14 @@ public class UI extends JFrame{
     private JLabel displayLabel ; //Reserve objects that will have repeated use from class initiation
 
     UI(){
-        this.setSize(1280 , 720); // Stage frame
+        this.setSize(1920 , 1080); // Stage frame
         this.setVisible(true);
-        this.setResizable(false);
+        this.setResizable(true);
         this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
 
         displayLabel = new JLabel();
-        displayLabel.setText("Load Picture"); // Stage label defaults
-        displayLabel.setSize(1280 , 720);
+        //displayLabel.setText("Load Picture"); // Stage label defaults
+        displayLabel.setSize(1920 , 1080);
         displayLabel.setHorizontalAlignment(JLabel.CENTER);
         displayLabel.setVerticalAlignment(JLabel.CENTER);
 
