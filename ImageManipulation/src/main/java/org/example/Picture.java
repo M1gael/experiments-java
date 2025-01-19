@@ -10,6 +10,7 @@ import java.util.Arrays;
 
 public class Picture {
 
+
     private File imageFile;
     private  BufferedImage bOrigImage, bScaledImage; // Reserve objects for repeated use
     private Graphics2D g2d;
@@ -28,7 +29,7 @@ public class Picture {
         // Load file
         imageFile = new File(imgPath);
 
-        // verify that it exists
+        // Verify that it exists
         if (!imageFile.exists()) {
             throw new IOException("File not found: " + imgPath);
         }
@@ -46,14 +47,14 @@ public class Picture {
         if (bOrigImage == null){
             throw new IOException("Failed to load Image : " + imgPath );}
 
-        //Scale image
+        // Scale image
         scaleImage();
 
-        return bScaledImage;// Send loaded image to be scaled and return it.
+        return bScaledImage;// Send scaled image
     }
 
 
-    public void getImageData(){}
+    public void getImageData(){/*To-Do*/}
 
 
     private void scaleImage (){
