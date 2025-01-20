@@ -9,7 +9,10 @@
     <file url="file://$PROJECT_DIR$/DatabaseApplication-SQL/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ImageManipulation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ImageManipulation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LoginSystem-Hashmap/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LoginSystem-Hashmap/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringTest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringTest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-photo-webapp/src/main/java" charset="UTF-8" />
   </component>
 </project>
