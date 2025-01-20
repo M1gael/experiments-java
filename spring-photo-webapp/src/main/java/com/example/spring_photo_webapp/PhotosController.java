@@ -12,7 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 @RestController // Tells spring that this class is the RestController
 public class PhotosController {
 
-    private final PhotosService photosService;
+    private final PhotosService photosService; // This is known as constructor injection
 
     public PhotosController(PhotosService photosService) {
         this.photosService = photosService; // Constructor to recieve a photos service and set it to the class.
@@ -25,29 +25,24 @@ public class PhotosController {
 
     @GetMapping("/photoz")
     public Collection<Photo> get(){
-        return db.values();
+        return photosService.get();
     }
 
     @GetMapping("/photoz/{id}")
     public Photo get(@PathVariable String id){
-        Photo photo = db.get(id);
+        Photo photo = photosService.get(id);
         if (photo == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         return photo;
     }
 
     @DeleteMapping("/photoz/{id}")
     public void delete(@PathVariable String id){
-        Photo photo = db.remove(id);
+        Photo photo = photosService.remove(id);
         if (photo == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
 
     @PostMapping("/photoz")
     public Photo create(@RequestPart("data") MultipartFile file) throws IOException {
-        Photo photo = new Photo();
-        photo.setId(UUID.randomUUID().toString());
-        photo.setFileName(file.getOriginalFilename());
-        photo.setData(file.getBytes());
-        db.put(photo.getId() , photo);
-        return photo;
+        return photosService.save(file.getOriginalFilename(), file.getBytes());
     }
 }
