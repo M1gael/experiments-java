@@ -17,14 +17,14 @@ public class UI extends JFrame implements ActionListener {
 
     UI(){
         myPicture = new Picture();
-        this.setSize(1920 , 900); // Stage frame
+        this.setSize(1920 , 1080); // Stage frame
         this.setResizable(true);
         this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
         this.setLayout(null);
 
         displayLabel = new JLabel();
         //displayLabel.setText("Load Picture"); // Stage label defaults
-        displayLabel.setBounds( 0 ,  0 , 1600 , 900);
+        displayLabel.setBounds( 0 ,  0 , 1600 , 1080);
         displayLabel.setHorizontalAlignment(JLabel.CENTER);
         displayLabel.setVerticalAlignment(JLabel.CENTER);
         displayLabel.setForeground(Color.green);
