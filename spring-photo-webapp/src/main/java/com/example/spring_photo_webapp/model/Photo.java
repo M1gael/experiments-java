@@ -1,17 +1,26 @@
-package com.example.spring_photo_webapp;
+package com.example.spring_photo_webapp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.NotEmpty;
 
 public class Photo {
 
+
     private String id;
 
     @NotEmpty
     private String fileName;
 
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
+    private String contentType;
+
     @JsonIgnore
     private byte[] data;
+
+
     // Default constructor (needed by frameworks like Jackson)
     public Photo() {
     }
@@ -23,6 +32,7 @@ public class Photo {
         this.fileName = fileName;
     }
 
+
     // Getter for id
     public String getId() {
         return id;
@@ -33,21 +43,32 @@ public class Photo {
         this.id = id;
     }
 
+
+    public String getContentType() {
+        return contentType;
+    }
+
+
     // Getter for fileName
     public String getFileName() {
         return fileName;
     }
+
 
     // Setter for fileName
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
 
+
     public byte[] getData() {
         return data;
     }
 
+
     public void setData(byte[] data) {
         this.data = data;
     }
+
+
 }

@@ -1,6 +1,6 @@
-package com.example.spring_photo_webapp;
+package com.example.spring_photo_webapp.service;
 
-import org.springframework.stereotype.Component;
+import com.example.spring_photo_webapp.model.Photo;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -13,7 +13,7 @@ import java.util.UUID;
 public class PhotosService { // For the simple purpose of handling our database
 
     private Map<String , Photo> db = new HashMap<>(){{
-        put("1" , new Photo("1" , "hello.jpg"));
+        put("1" , new Photo("1" , "ligma.jpg"));
     }};
 
     public Collection<Photo> get(){
@@ -28,8 +28,9 @@ public class PhotosService { // For the simple purpose of handling our database
         return db.remove(id);
     }
 
-    public Photo save(String fileName , byte[] data) {
+    public Photo save(String fileName , String contentType, byte[] data) {
         Photo photo = new Photo();
+        photo.setContentType(contentType);
         photo.setId(UUID.randomUUID().toString());
         photo.setFileName(fileName);
         photo.setData(data);
