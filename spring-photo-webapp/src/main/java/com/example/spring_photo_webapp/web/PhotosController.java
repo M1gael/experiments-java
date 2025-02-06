@@ -28,13 +28,13 @@ public class PhotosController {
 
 
     @GetMapping("/photoz")
-    public Collection<Photo> get(){
+    public Iterable<Photo> get(){
         return photosService.get();
     }
 
 
     @GetMapping("/photoz/{id}")
-    public Photo get(@PathVariable String id){
+    public Photo get(@PathVariable Integer id){
         Photo photo = photosService.get(id);
         if (photo == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         return photo;
@@ -42,9 +42,8 @@ public class PhotosController {
 
 
     @DeleteMapping("/photoz/{id}")
-    public void delete(@PathVariable String id){
-        Photo photo = photosService.remove(id);
-        if (photo == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    public void delete(@PathVariable Integer id){
+        photosService.remove(id);
     }
 
 

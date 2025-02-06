@@ -1,6 +1,7 @@
 package com.example.spring_photo_webapp.service;
 
 import com.example.spring_photo_webapp.model.Photo;
+import com.example.spring_photo_webapp.repository.PhotozRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -12,29 +13,30 @@ import java.util.UUID;
 @Service
 public class PhotosService { // For the simple purpose of handling our database
 
-    private Map<String , Photo> db = new HashMap<>(){{
-        put("1" , new Photo("1" , "ligma.jpg"));
-    }};
+    private final PhotozRepository photozRepository;
 
-    public Collection<Photo> get(){
-        return db.values();
+    public PhotosService(PhotozRepository photozRepository){
+        this.photozRepository = photozRepository;
     }
 
-    public Photo get(String id) {
-        return db.get(id);
+    public Iterable<Photo> get(){
+        return photozRepository.findAll();
     }
 
-    public Photo remove(String id) {
-        return db.remove(id);
+    public Photo get(Integer id) {
+        return photozRepository.findById(id).orElse(null);
+    }
+
+    public void remove(Integer id) {
+        photozRepository.deleteById(id);
     }
 
     public Photo save(String fileName , String contentType, byte[] data) {
         Photo photo = new Photo();
         photo.setContentType(contentType);
-        photo.setId(UUID.randomUUID().toString());
         photo.setFileName(fileName);
         photo.setData(data);
-        db.put(photo.getId() , photo);
+        photozRepository.save(photo);
         return photo;
     }
 }

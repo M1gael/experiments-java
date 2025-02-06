@@ -2,11 +2,14 @@ package com.example.spring_photo_webapp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.NotEmpty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table("PHOTOZ") // Photos class lives in the photos table
 public class Photo {
 
-
-    private String id;
+    @Id
+    private int id;
 
     @NotEmpty
     private String fileName;
@@ -26,20 +29,13 @@ public class Photo {
     }
 
 
-    // Parameterized constructor
-    public Photo(String id, String fileName) {
-        this.id = id;
-        this.fileName = fileName;
-    }
-
-
     // Getter for id
-    public String getId() {
+    public int getId() {
         return id;
     }
 
     // Setter for id
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
