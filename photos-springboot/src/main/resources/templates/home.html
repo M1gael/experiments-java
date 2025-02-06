@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Photo Storage App</title>
+</head>
+<body>
+<h1>Photo Storage</h1>
+
+<!-- Upload Form -->
+<form method="POST" action="/upload" enctype="multipart/form-data">
+  <input type="file" name="file" accept="image/*" required>
+  <input type="text" name="description" placeholder="Description">
+  <button type="submit">Upload</button>
+</form>
+
+<!-- Photo Gallery -->
+<div th:each="photo : ${photos}">
+  <img th:src="@{/photo/{id}(id=${photo.id})}"
+       th:alt="${photo.description}"
+       style="max-width: 300px;">
+  <p th:text="${photo.description}"></p>
+</div>
+</body>
+</html>
