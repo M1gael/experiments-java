@@ -42,4 +42,6 @@ public class PhotoController {
                 .contentType(MediaType.parseMediaType(photo.getContentType()))
                 .body(photo.getData());
     }
+
+
 }
